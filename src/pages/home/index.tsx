@@ -1,11 +1,13 @@
 import { FC } from 'react';
 import { Layout } from 'common/layout';
-import { Controls } from './components/Controls/Controls';
+import { ControlAutoCompleteList } from './components/ControlAutoCompleteList';
+import { Controls } from './components/Controls';
 
 const Home: FC = () => {
   return (
     <Layout>
       <Controls />
+      <ControlAutoCompleteList />
     </Layout>
   );
 };
