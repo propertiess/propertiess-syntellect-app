@@ -1,10 +1,13 @@
-import { FC, HTMLAttributes } from 'react';
+import { FC } from 'react';
 import styles from './MyInput.module.scss';
 
-interface Props extends HTMLAttributes<HTMLInputElement> {}
+interface Props {
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
-const MyInput: FC<Props> = ({ ...rest }) => {
-  return <input className={styles.wrap} type='text' {...rest} />;
+const MyInput: FC<Props> = props => {
+  return <input className={styles.wrap} type='text' {...props} />;
 };
 
 export { MyInput };
