@@ -6,8 +6,8 @@ import { useButton, useInput } from 'pages/home/hooks';
 import styles from './Controls.module.scss';
 
 const Controls: FC = observer(() => {
-  const first = useInput();
-  const second = useInput();
+  const first = useInput('first');
+  const second = useInput('second');
 
   const { alertMessage, alertNumber, error } = useButton();
 
@@ -16,7 +16,8 @@ const Controls: FC = observer(() => {
       <div className={styles.row}>
         <MyInput
           value={first.value ?? ''}
-          onChange={e => first.onChange(e.target.value)}
+          onChange={e => first.setValue(e.target.value)}
+          placeholder='Введите текст'
         />
         <MyButton onClick={first.resetValue}>Очистить поле ввода</MyButton>
         <MyButton onClick={first.setHelloWorld}>
@@ -29,7 +30,8 @@ const Controls: FC = observer(() => {
         </MyButton>
         <MyInput
           value={second.value ?? ''}
-          onChange={e => second.onChange(e.target.value)}
+          onChange={e => second.setValue(e.target.value)}
+          placeholder='Введите текст'
         />
         <MyButton onClick={() => alertMessage(second.value ?? '')}>
           Показать Alert с текстом в поле ввода

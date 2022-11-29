@@ -1,28 +1,24 @@
-import { useEffect, useState } from 'react';
-import Input from 'common/store/input';
+import Inputs from 'common/store/inputs';
+import { Prop } from 'common/store/types';
 
-export const useInput = () => {
-  const [value, setValue] = useState<Input>();
+export const useInput = (prop: Prop) => {
+  const { inputs, onChange } = Inputs;
 
-  useEffect(() => {
-    setValue(new Input());
-  }, []);
-
-  const onChange = (val: string) => {
-    value?.onChange(val);
+  const setValue = (val: string) => {
+    onChange(prop, val);
   };
 
   const resetValue = () => {
-    value?.onChange('');
+    onChange(prop, '');
   };
 
   const setHelloWorld = () => {
-    value?.onChange('Hello world!');
+    onChange(prop, 'Hello world!');
   };
 
   return {
-    value: value?.value,
-    onChange,
+    value: inputs[prop],
+    setValue,
     resetValue,
     setHelloWorld
   };
