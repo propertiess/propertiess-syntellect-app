@@ -21,3 +21,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@media (max-width: 960px) {
+  button,
+  input {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 696px) {
+  button,
+  input {
+    font-size: 11px;
+  }
+}

@@ -2,3 +2,9 @@
   @apply bg-white rounded font-medium w-full max-h-64 overflow-x-hidden p-3 shadow absolute z-10 bottom-0 left-0;
   transform: translateY(101%);
 }
+
+@media (max-width: 960px) {
+  .wrap {
+    font-size: 12px;
+  }
+}

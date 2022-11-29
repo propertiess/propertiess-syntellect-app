@@ -1,5 +1,5 @@
 .wrap {
-  @apply flex items-center justify-between mt-2 gap-3 cursor-pointer p-1 rounded hover:bg-blue-500 hover:text-white;
+  @apply flex flex-wrap items-center justify-between mt-2 gap-3 cursor-pointer p-1 rounded hover:bg-blue-500 hover:text-white;
   transition: color 0.3s ease, background-color 0.3s ease;
 
   .names {

@@ -1,0 +1,9 @@
+.main {
+  @apply p-3 mx-auto;
+}
+
+@media (max-width: 696px) {
+  .main {
+    @apply p-1;
+  }
+}

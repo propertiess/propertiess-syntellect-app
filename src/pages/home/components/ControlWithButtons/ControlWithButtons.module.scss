@@ -1,3 +1,15 @@
 .row {
-  @apply flex flex-wrap gap-3;
+  @apply flex items-center gap-3;
+}
+
+@media (max-width: 540px) {
+  .row {
+    @apply flex-wrap;
+  }
+}
+
+@media (max-width: 320px) {
+  .row {
+    @apply justify-center;
+  }
 }

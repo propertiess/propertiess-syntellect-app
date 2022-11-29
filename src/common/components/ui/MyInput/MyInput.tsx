@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes } from 'react';
-import styles from './MyInput.module.scss';
+import styles from './MyInput.module.css';
 
 interface Props extends HTMLAttributes<HTMLInputElement> {
   value?: string;
@@ -16,6 +16,7 @@ const MyInput: FC<Props> = ({ value, onChange, full, ...rest }) => {
       type='text'
       value={value}
       onChange={onChange}
+      spellCheck={false}
       {...rest}
     />
   );

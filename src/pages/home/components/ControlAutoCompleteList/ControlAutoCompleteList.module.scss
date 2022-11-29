@@ -1,3 +1,18 @@
 .wrap {
-  @apply mt-10 flex justify-center px-1 flex-wrap gap-3;
+  @apply mt-10 flex px-1 flex-wrap justify-between gap-3;
+}
+
+@media (max-width: 500px) {
+  .wrap {
+    > div {
+      @apply w-full;
+    }
+    @apply justify-center;
+  }
+}
+
+@media (max-width: 400px) {
+  .wrap {
+    @apply text-center;
+  }
 }
