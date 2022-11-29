@@ -2,7 +2,7 @@ import Inputs from 'common/store/inputs';
 import { alertMessage, alertNumber } from 'pages/home/utils';
 import { ControlWithButtonsProps } from '../ControlWithButtons';
 
-const { inputs, onChange } = Inputs;
+const { onChange } = Inputs;
 
 export const controlsProps: ControlWithButtonsProps[] = [
   {
@@ -23,13 +23,13 @@ export const controlsProps: ControlWithButtonsProps[] = [
     leftButtons: [
       {
         title: 'Показать Alert, если в поле ввода число',
-        callback: () => alertNumber(inputs.second)
+        callback: () => alertNumber(Inputs.second)
       }
     ],
     rightButtons: [
       {
         title: 'Показать Alert с текстом в поле ввода',
-        callback: () => alertMessage(inputs.second)
+        callback: () => alertMessage(Inputs.second)
       }
     ]
   }

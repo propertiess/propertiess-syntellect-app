@@ -6,7 +6,7 @@ export const autoCompleteData: IAutoComplete[] = [
     countOfPrompts: 3
   },
   {
-    prop: 'fourty',
+    prop: 'fourth',
     countOfPrompts: 10
   }
 ];

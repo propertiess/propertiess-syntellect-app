@@ -1,23 +1,24 @@
 import { action, makeObservable, observable } from 'mobx';
-import { IInputs, Prop } from './types';
+import { Prop } from './types';
 
 class Inputs {
-  inputs: IInputs = {
-    first: '',
-    second: '',
-    third: '',
-    fourty: ''
-  };
+  first = '';
+  second = '';
+  third = '';
+  fourth = '';
 
   constructor() {
     makeObservable(this, {
-      inputs: observable,
+      first: observable,
+      second: observable,
+      third: observable,
+      fourth: observable,
       onChange: action.bound
     });
   }
 
   onChange(prop: Prop, value: string) {
-    this.inputs[prop] = value;
+    this[prop] = value;
   }
 }
 

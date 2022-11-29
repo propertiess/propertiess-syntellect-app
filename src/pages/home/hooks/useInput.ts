@@ -2,7 +2,7 @@ import Inputs from 'common/store/inputs';
 import { Prop } from 'common/store/types';
 
 export const useInput = (prop: Prop) => {
-  const { inputs, onChange } = Inputs;
+  const { onChange } = Inputs;
 
   const setValue = (val: string) => {
     onChange(prop, val);
@@ -17,7 +17,7 @@ export const useInput = (prop: Prop) => {
   };
 
   return {
-    value: inputs[prop],
+    value: Inputs[prop],
     setValue,
     resetValue,
     setHelloWorld
