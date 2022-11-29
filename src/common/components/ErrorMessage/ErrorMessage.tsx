@@ -8,7 +8,7 @@ interface Props {
 
 const ErrorMessage: FC<Props> = ({ title, message }) => {
   return (
-    <div role='alert'>
+    <div className={styles.wrap} role='alert'>
       <div className={styles.title}>{title}</div>
       <div className={styles.message}>
         <p>{message}</p>

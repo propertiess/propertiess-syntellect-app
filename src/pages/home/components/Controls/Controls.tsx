@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { ErrorMessage } from 'common/components/ErrorMessage/ErrorMessage';
+import { ErrorMessage } from 'common/components/ErrorMessage';
 import { MyButton, MyInput } from 'common/components/ui';
 import { observer } from 'mobx-react-lite';
 import { useButton, useInput } from 'pages/home/hooks';
