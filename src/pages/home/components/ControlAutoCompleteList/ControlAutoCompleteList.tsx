@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { autoCompleteData } from 'pages/home/utils';
 import { ControlAutoComplete } from '../ControlAutoComplete';
 import styles from './ControlAutoCompleteList.module.scss';
+import { autoCompleteData } from './control-auto-complete.data';
 
 const ControlAutoCompleteList: FC = () => {
   return (

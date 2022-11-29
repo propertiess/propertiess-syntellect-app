@@ -4,3 +4,8 @@ export interface IAutoComplete {
   prop: Prop;
   countOfPrompts: number;
 }
+
+export interface IButtons {
+  title: string;
+  callback: () => void;
+}

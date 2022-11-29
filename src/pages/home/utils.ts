@@ -1,12 +1,11 @@
-import { IAutoComplete } from './types';
+export const alertMessage = (value: string) => {
+  if (!value.trim()) return;
 
-export const autoCompleteData: IAutoComplete[] = [
-  {
-    prop: 'third',
-    countOfPrompts: 3
-  },
-  {
-    prop: 'fourty',
-    countOfPrompts: 10
-  }
-];
+  alert(value);
+};
+
+export const alertNumber = (value: string) => {
+  if (!value.trim() || isNaN(+value)) return;
+
+  alert(value);
+};
