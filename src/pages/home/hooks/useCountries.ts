@@ -3,11 +3,14 @@ import { CountryInfo, getCountryByName } from 'api/apiService';
 
 export const useCountries = (debouncedValue: string, length: number) => {
   const [countries, setCountries] = useState<CountryInfo[]>();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    if (!debouncedValue) return;
+    if (!debouncedValue) {
+      countries?.length && setCountries([]);
+      return;
+    }
 
     (async () => {
       try {
