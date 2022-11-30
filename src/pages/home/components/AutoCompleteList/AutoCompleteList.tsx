@@ -18,10 +18,12 @@ const AutoCompleteList: FC<Props> = ({
   ...rest
 }) => {
   const { countries, isLoading, error } = useCountries(debouncedValue, length);
+  const isSameValue =
+    !!countries?.length && debouncedValue === countries[0].name;
 
   if (!debouncedValue && !countries?.length) return null;
 
-  if (countries?.length && debouncedValue === countries[0].name) return null;
+  if (isSameValue) return null;
 
   if (isLoading) return <Loader />;
 

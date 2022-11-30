@@ -19,7 +19,7 @@ export const useClickOutside = (callback: () => void, trigger: boolean) => {
     return () => {
       document.removeEventListener('mousedown', handler);
     };
-  }, [trigger]);
+  }, [trigger]); // eslint-disable-line
 
   return ref;
 };

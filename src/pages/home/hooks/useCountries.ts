@@ -30,7 +30,7 @@ export const useCountries = (debouncedValue: string, length: number) => {
         setIsLoading(false);
       }
     })();
-  }, [debouncedValue]);
+  }, [debouncedValue]); // eslint-disable-line
 
   return {
     countries,
