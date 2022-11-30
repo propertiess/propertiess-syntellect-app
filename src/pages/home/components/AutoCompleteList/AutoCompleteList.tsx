@@ -21,6 +21,8 @@ const AutoCompleteList: FC<Props> = ({
 
   if (!debouncedValue && !countries?.length) return null;
 
+  if (countries?.length && debouncedValue === countries[0].name) return null;
+
   if (isLoading) return <Loader />;
 
   if (error) return <ErrorMessage title='Ошибка' message={error.message} />;
