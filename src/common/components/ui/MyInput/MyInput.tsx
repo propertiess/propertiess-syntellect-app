@@ -1,25 +1,14 @@
-import { FC, HTMLAttributes } from 'react';
+import { FC, InputHTMLAttributes } from 'react';
 import styles from './MyInput.module.css';
 
-interface Props extends HTMLAttributes<HTMLInputElement> {
-  value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+interface Props extends InputHTMLAttributes<HTMLInputElement> {
   full?: boolean;
 }
 
-const MyInput: FC<Props> = ({ value, onChange, full, ...rest }) => {
+const MyInput: FC<Props> = ({ full, ...rest }) => {
   const style = full ? `${styles.wrap} ${styles.full}` : styles.wrap;
 
-  return (
-    <input
-      className={style}
-      type='text'
-      value={value}
-      onChange={onChange}
-      spellCheck={false}
-      {...rest}
-    />
-  );
+  return <input className={style} type='text' spellCheck={false} {...rest} />;
 };
 
 export { MyInput };
